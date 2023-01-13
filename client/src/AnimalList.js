@@ -1,4 +1,4 @@
-const AnimalList = ({ animals, removeAnimal, editAnimal }) => {
+const AnimalList = ({ animals, removeAnimal, editAnimal, searchTerm }) => {
   return (
     <table className="animals">
       <tbody>
@@ -10,7 +10,11 @@ const AnimalList = ({ animals, removeAnimal, editAnimal }) => {
           <th className="text-right padd">Delete</th>
         </tr>
 
-          {animals.map((animal) => {
+          {animals
+          .filter((item) => {
+            return searchTerm.toLowerCase() === '' ? item : item.name.toLowerCase().includes(searchTerm)
+          })
+          .map((animal) => {
             return (
               <tr key={animal.id}>
                 <td className='small-screen'>{animal.name}</td>

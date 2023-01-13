@@ -8,6 +8,7 @@ function App() {
   const [animalList, setAnimalList] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
   const [editId, setEditId] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const initialFetch = async () => {
     try {
@@ -62,6 +63,12 @@ function App() {
   return (
     <div className="App">
       <div className='container'>
+      <form>
+          <h3>Search</h3>
+          <div>
+            <input type="text" className='animal-input' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+          </div>
+        </form>
         <form onSubmit={handleSubmit}>
           <h3>Animals</h3>
           <div>
@@ -73,7 +80,7 @@ function App() {
       { animalList.length > 0 && ( 
         // Only show when there are animals
         <div className='animal-container'>
-          <AnimalList animals={animalList} removeAnimal={removeAnimal} editAnimal={editAnimal} />
+          <AnimalList animals={animalList} removeAnimal={removeAnimal} editAnimal={editAnimal} searchTerm={searchTerm} />
         </div>
       ) }
     </div>
