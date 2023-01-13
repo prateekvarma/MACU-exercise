@@ -11,3 +11,116 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.animals {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.animals td {
+  padding: 8px;
+}
+
+.animals th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #5E5DF0;
+  color: white;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.animals tr:nth-child(even){background-color: #f2f2f2;}
+
+.animals tr:hover {background-color: #ddd;}
+
+.animals td {
+  padding: 8px;
+}
+
+@media (max-width:600px) {
+  .small-screen {
+      display: flex;
+  }
+}
+
+.animal-container {
+  margin-top: 2rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.padd {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.animal-input {
+  padding: 0.25rem;
+  padding-left: 1rem;
+  background: var(--clr-grey-10);
+  border-top-left-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+  border-color: black;
+  font-size: 1rem;
+  flex: 1 0 auto;
+  color: var(--clr-grey-5);
+  border-radius: 8px;
+}
+
+.animal-form h3 {
+  color: var(--clr-primary-1);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-control {
+  display: flex;
+  justify-content: center;
+}
+
+
+.submit-btn {
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember",sans-serif;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 5px 0 5px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 70px;
+}
+
+
+.submit-btn:hover {
+  background-color: #f7fafa;
+}
+
+.submit-btn:focus {
+  border-color: #008296;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  outline: 0;
+}
